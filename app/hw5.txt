@@ -1,0 +1,54 @@
+﻿CPSC 473 - Front-End Engineering - Spring 2018
+Homework 5
+Section 02 - due March 19, Section 01 - due March 21
+In this assignment, you will start a new application, Chattrbox, and work with Node.js to build a custom back-end.
+Complete the following:
+1. Work through Chapter 15 to set up the chattrbox/ directory and create index.js.
+2. Complete the Bronze Challenge: Creating a Custom Error Page from Chapter 15.
+
+Load the page from app/error.html, and include the appropriate image from https://http.cat/. 
+3. Complete the Silver Challenge: Providing a MIME Type Dynamically from Chapter 15.
+
+When you push this this homework assignment to GitHub, include the files you tested in your app/ subdirectory.
+4. Work through Chapter 16 to create websockets-server.js, install wscat, and test the results.
+5. Add a /topic command to the chat server to track what users are discussing in the chat. If any user types a string like this:
+/topic Chatting about WebSockets
+All connected users should receive this string:
+*** Topic has changed to 'Chatting about WebSockets'
+Users who are not connected should not see this message (i.e., the /topic command should not be saved in the array of previous messages to be sent to each user.)
+Instead, the first message that newly connected users should receive is the current topic:
+*** Topic is 'Chatting about WebSockets'
+Newly connected users should then receive all the previous messages.
+   1. Push the contents of your project to a new GitHub repository using a git client (e.g., the git command-line client, GitHub Desktop, or GitHub for Atom). Do not submit files using drag-and-drop onto the repository web page, and do not push this assignment to the same repository as your previous homework assignments.
+Submission
+Turn in the code for this homework by uploading your chattrbox/ directory to a public repository on GitHub. While you may discuss this homework assignment with other students, the work you submit must have been completed on your own.
+To complete your submission, print the following sheet, fill out the spaces below, and submit it to the professor in class by the deadline. Failure to follow the instructions exactly will incur a 10% penalty on the grade for this assignment.
+________________
+
+
+Homework Submission
+CPSC 473, Section ____________________
+Homework 5
+Your name  __________________________________________________________________
+GitHub repository  https://github.com/____________________/____________________
+Verify each of the following items and place a checkmark in the correct column. Each item incorrectly marked will incur a 5% penalty on the grade for this assignment.
+
+
+Completed
+	Not Completed
+	
+
+	   * 	   * 	Files placed in the app/ directory can be viewed at http://localhost:3000 when index.js is running
+	   * 	   * 	Invalid URLs beginning with http://localhost:3000 result in HTTP 404 and the contents of app/error.html.
+	   * 	   * 	Files served from the app/ directory have the correct MIME type.
+	   * 	   * 	When index.js is running, chats can be held on ws://localhost:3001 as shown in Figure 16.4
+	   * 	   * 	The /topic command works as described in Section (5) above.
+	   * 	   * 	An .eslintrc.js file is present in the root of the repository and all issues detected by linter-eslint have been fixed
+	   * 	   * 	HTML, CSS, and JavaScript code have been reformatted with the atom-beautify plugin
+	   * 	   * 	Project directory pushed to new GitHub repository listed above
+	   * 	   * 	Project directory has been pushed using a GitHub client, not by manually dragging-and-dropping files onto the GitHub web page.
+	Comments on your submission
+____________________________________________________________________________
+____________________________________________________________________________
+____________________________________________________________________________
+____________________________________________________________________________
