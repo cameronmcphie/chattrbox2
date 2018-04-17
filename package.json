@@ -9,14 +9,32 @@
     "ws": "^5.1.0"
   },
   "devDependencies": {
-    "eslint": "^4.19.0",
+    "babelify": "^8.0.0",
+    "browserify": "^16.2.0",
+    "eslint": "^4.19.1",
     "eslint-plugin-node": "^6.0.1",
-    "nodemon": "^1.17.2"
+    "nodemon": "^1.17.2",
+    "watchify": "^3.11.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build": "browserify -d app/scripts/src/main.js -o app/scripts/dist/main.js",
+    "watch": "watchify -v -d app/scripts/src/main.js -o app/scripts/dist/main.js"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ],
+          "sourceMap": true
+        }
+      ]
+    ]
   },
   "author": "Cameron McPhie",
   "license": "ISC"
