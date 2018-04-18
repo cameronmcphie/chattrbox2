@@ -28,5 +28,5 @@ export default {
   init,
   registerOpenHandler,
   registerMessageHandler,
-  sendMessage
+  sendMessage,
 };
